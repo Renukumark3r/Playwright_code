@@ -18,8 +18,8 @@ public class launch {
 		String Pgtitle=page.title();
 		System.out.println("page title "+Pgtitle);
 		page.close();
-		browser.close();
-		playwright.close();
+		//browser.close();
+		//playwright.close();
 		
 	}
 
