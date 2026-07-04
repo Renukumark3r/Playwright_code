@@ -6,7 +6,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
-public class demo {
+public class dropdown {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -15,15 +15,9 @@ public class demo {
 		Browser browser=playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 		  
 		Page page=browser.newPage();
-		page.navigate("https://testsheepnz.github.io/BasicCalculator.html");
-		page.fill("#number1Field","10");
-		page.fill("#number2Field", "35");
-		page.selectOption("#selectOperationDropdown", "0");
-		page.locator("//input[@id='calculateButton']").click();
-		String Answer=page.locator("//input[@id='numberAnswerField']").inputValue();
-		System.out.println("Answer   "+Answer);
-		page.locator("//input[@id='clearButton']").click();
-	  
+		page.navigate("https://letcode.in/dropdowns/");
+		page.selectOption("#fruits", "1");
+		
 	}
 
 }
